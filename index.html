@@ -60,7 +60,7 @@
       <section class="section hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="button" type="button">Заказать услугу</button>
+          <button class="button" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <section class="section features">
@@ -120,27 +120,33 @@
           <ul class="list">
             <li class="preview-list">
               <img
+                class="preview-item"
                 src="./images/first-page/employment/box1.jpg"
                 alt="HTML"
                 width="370"
                 height="294"
               />
+              <p class="preview-text">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
             </li>
             <li class="preview-list">
               <img
+                class="preview-item"
                 src="./images/first-page/employment/box2.jpg"
                 alt="CSS"
                 width="370"
                 height="294"
               />
+              <p class="preview-text">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
             </li>
             <li class="preview-list">
               <img
+                class="preview-item"
                 src="./images/first-page/employment/box3.jpg"
                 alt="JavaScript"
                 width="370"
                 height="294"
               />
+              <p class="preview-text">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
             </li>
           </ul>
         </div>
@@ -425,5 +431,13 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-button" type="button" data-modal-close>
+          <img src="./images/first-page/modal/vector.svg" alt="close" />
+        </button>
+      </div>
+    </div>
+    <script src="./modal.js"></script>
   </body>
 </html>
