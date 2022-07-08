@@ -193,11 +193,13 @@ img {
 .contacts-link:hover .contacts-icon-envelope,
 .contacts-link:focus .contacts-icon-envelope {
   fill: var(--accent-color);
+  transition: fill var(--timing-function);
 }
 
 .contacts-link:hover .contacts-icon-smartphone,
 .contacts-link:focus .contacts-icon-smartphone {
   fill: var(--accent-color);
+  transition: fill var(--timing-function);
 }
 
 .hero {
