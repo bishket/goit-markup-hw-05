@@ -135,15 +135,7 @@ img {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
-
-  /* opacity: 0; */
 }
-
-/* .current:hover::after,
-.current:focus::after {
-  opacity: 1;
-  transition: opacity var(--timing-function);
-} */
 
 .nav-link,
 .contacts-link {
@@ -229,9 +221,9 @@ img {
 }
 .hero .button:hover,
 .hero .button:focus {
-  background-color: var(--button-hover-color);
-  color: var(--background-basic);
+  background-color: var(--background-svg);
 }
+
 .button {
   display: inline-block;
 
@@ -241,6 +233,8 @@ img {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  background-color: var(--button-hover-color);
+  color: var(--background-basic);
 
   border: none;
   padding: 10px 32px;
@@ -535,7 +529,7 @@ img {
 
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity var(--timing-function);
+  transition: opacity var(--timing-function), visibility var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -682,28 +676,9 @@ img {
 .portfolio-thumb {
   position: relative;
 }
-/* .portfolio-thumb::before {
-  content: '';
-  position: absolute;
-  display: inline-block;
 
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+/* portfolio-overlay */
 
-  background: rgba(33, 150, 243, 0.9);
-
-  transform: translateY(105%);
-  transition: transform var(--timing-function);
-  opacity: 1;
-}
-
-.portfolio-items:hover .portfolio-thumb::before {
-  opacity: 1;
-  transform: translateY(0);
-}
-*/
 .portfolio-thumb-text {
   position: absolute;
   top: 63px;
@@ -721,12 +696,12 @@ img {
   opacity: 1;
 }
 
-.portfolio-items:hover .portfolio-thumb-text {
+.portfolio-link:hover .portfolio-thumb-text,
+.portfolio-link:focus .portfolio-thumb-text {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* portfolio-overlay */
 .portfolio-overlay {
   position: absolute;
 
@@ -741,8 +716,8 @@ img {
   transition: transform var(--timing-function);
   opacity: 0;
 }
-
-.portfolio-items:hover .portfolio-overlay {
+.portfolio-link:hover .portfolio-overlay,
+.portfolio-link:focus .portfolio-overlay {
   opacity: 1;
   transform: translateY(0);
 }
